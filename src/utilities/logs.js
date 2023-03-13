@@ -87,7 +87,7 @@ export function debug(message, actor = "System") {
     ];
     const date = new Date()
     console.log(
-        "\x1b[2m" +
+        "\x1b[2m-----------------------------\n" +
         ("0" + date.getDate()).slice(-2) +
         " " +
         meses[date.getMonth()] +
@@ -99,9 +99,10 @@ export function debug(message, actor = "System") {
         ("0" + date.getMinutes()).slice(-2) +
         ":" +
         ("0" + date.getSeconds()).slice(-2) +
+        (" "+date.toTimeString().slice(9,17)) +
         "\x1b[0m"
     );
-    console.log(`\x1b[1m${actor}\x1b[0m: ${message}\n`);
+    console.log(`\x1b[1m\x1b[34m${actor}\x1b[0m: ${message}`);
 }
 
 /**

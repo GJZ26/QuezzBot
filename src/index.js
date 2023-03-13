@@ -57,4 +57,4 @@ await bot.login(TOKEN).then((v) => {
 await loadEvents(bot)
 clear();
 log(`${bold("Quizz Bot", "LOG")} | ${version}`);
-success("Bot awake and ready! 🤖")
+success("Bot awake and ready! 🤖");

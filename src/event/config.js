@@ -1,5 +1,6 @@
 import { Client, REST, Routes } from "discord.js";
-import { TestManifest } from "../commands/TestCmd.js";
+import { CreateQuestManifest } from "../commands/CreateQuestCmd.js";
+import { StatusManifest } from "../commands/StatusCmd.js";
 import { success, warn } from "../utilities/logs.js";
 
 /**
@@ -13,7 +14,8 @@ export default async function refreshCommands(bot) {
     await rest.put(Routes.applicationCommands(bot.user.id),
         {
             body: [
-                TestManifest
+                StatusManifest,
+                CreateQuestManifest
             ]
         })
         .then((v) => {
