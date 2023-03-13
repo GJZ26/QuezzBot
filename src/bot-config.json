@@ -2,6 +2,5 @@
     "version":"v.2.0.0-dev",
     "activity_type":2,
     "activity_description":"Music",
-    "intents":131071,
-    "permission":446677646400
+    "intents":131071
 }

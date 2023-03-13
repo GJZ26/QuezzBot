@@ -1,6 +1,6 @@
 /**
  * 
- *  QuizzBot - v.0.0.0-dev
+ *  QuizzBot - v.2.0.0-dev
  *  By: Adolfo Juárez
  * 
  */

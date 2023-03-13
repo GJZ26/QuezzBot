@@ -3,7 +3,6 @@ import { TestManifest } from "../commands/TestCmd.js";
 import { success, warn } from "../utilities/logs.js";
 
 /**
- * 
  * @param {Client} bot 
  */
 export default async function refreshCommands(bot) {

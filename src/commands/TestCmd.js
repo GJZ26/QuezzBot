@@ -11,4 +11,5 @@ export const TestManifest = {
  */
 export function TestCmd(interaction) {
     interaction.reply("Yep, I'm still working!");
+    debug("Ping!",interaction.user.username);
 }
