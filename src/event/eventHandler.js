@@ -1,5 +1,5 @@
 import { Client } from "discord.js";
-import { TestCmd } from "../commands/TestCmd.js";
+import { TestCmd, TestManifest } from "../commands/TestCmd.js";
 import { success, warn } from "../utilities/logs.js";
 import refreshCommands from "./config.js";
 
@@ -14,7 +14,7 @@ export default async function loadEvents(bot) {
     bot.on('interactionCreate',(interaction)=>{
         if (!interaction.isChatInputCommand()) return;
 
-        if(interaction.commandName == 'ping') TestCmd(interaction); 
+        if(interaction.commandName == TestManifest.name) TestCmd(interaction); 
     })
 
     success("Events added")

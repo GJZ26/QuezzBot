@@ -1,15 +1,14 @@
-import discord from "discord.js"
-const { Interaction } = discord
+import { CommandInteraction } from "discord.js"
+import { debug } from "../utilities/logs.js"
 
 export const TestManifest = {
-    name: "ping",
-    description: "First command for arturito"
+    name: "status",
+    description: "Command to find out if QuizzBot is still alive"
 }
 
 /**
- * 
- * @param {import("discord.js").Interaction} msg 
+ * @param {CommandInteraction} interaction
  */
 export function TestCmd(interaction) {
-    interaction.reply("pong")
+    interaction.reply("Yep, I'm still working!");
 }

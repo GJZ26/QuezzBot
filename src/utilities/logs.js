@@ -70,6 +70,40 @@ export function error(message, options = defaultOption) {
     if (options["exit"]) process.exit(1);
 }
 
+export function debug(message, actor = "System") {
+    const meses = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+    ];
+    const date = new Date()
+    console.log(
+        "\x1b[2m" +
+        ("0" + date.getDate()).slice(-2) +
+        " " +
+        meses[date.getMonth()] +
+        " " +
+        date.getFullYear() +
+        " - " +
+        ("0" + date.getHours()).slice(-2) +
+        ":" +
+        ("0" + date.getMinutes()).slice(-2) +
+        ":" +
+        ("0" + date.getSeconds()).slice(-2) +
+        "\x1b[0m"
+    );
+    console.log(`\x1b[1m${actor}\x1b[0m: ${message}\n`);
+}
+
 /**
  * Converts a string to bold to print it by console
  * @param {String} message Message
